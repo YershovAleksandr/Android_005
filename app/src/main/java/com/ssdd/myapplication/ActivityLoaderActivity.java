@@ -1,6 +1,7 @@
 package com.ssdd.myapplication;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -32,7 +33,10 @@ public class ActivityLoaderActivity extends Activity {
 		
 		Log.i(TAG, "Entered startBookMarksActivity()");
 	
-		// TODO - Start the BookmarksActivity
+		// DO - Start the BookmarksActivity
 
+		Intent intent = new Intent(this, BookmarksActivity.class);
+
+		startActivity(intent);
 	}
 }
