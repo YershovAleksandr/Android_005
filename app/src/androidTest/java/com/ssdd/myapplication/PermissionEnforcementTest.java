@@ -38,15 +38,15 @@ public class PermissionEnforcementTest extends
 		PackageManager pm = getActivity().getPackageManager();
 		try {
 			ActivityInfo activityInfo = pm.getActivityInfo(new ComponentName(
-					"course.labs.dangerousapp",
-					"course.labs.dangerousapp.DangerousActivity"), 0);
+					"com.ssdd.myapplication42",
+					"com.ssdd.myapplication42.DangerousActivity"), 0);
 			assertTrue(
 					"PermissionEnforcementTest:" +
 					"Section One:" +
-					"course.labs.permissions.DANGEROUS_ACTIVITY_PERM not enforced by DangerousActivity",
+					"com.ssdd.myapplication.DANGEROUS_ACTIVITY_PERM not enforced by DangerousActivity",
 					null != activityInfo && null != activityInfo.permission
 							&& activityInfo.permission
-									.equals("course.labs.permissions.DANGEROUS_ACTIVITY_PERM"));
+									.equals("com.ssdd.myapplication42.DANGEROUS_ACTIVITY_PERM"));
 		} catch (NameNotFoundException e) {
 			fail("PermissionEnforcementTest:" +
 					"Section One:" +
