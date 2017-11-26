@@ -8,7 +8,8 @@
         android:minSdkVersion="18"
         android:targetSdkVersion="26" />
 
-    <!--  TODO - add uses-permission elements -->
+    <!--  DO - add uses-permission elements -->
+    <uses-permission android:name="com.ssdd.myapplication42.DANGEROUS_ACTIVITY"/>
 
     <application
         android:allowBackup="true"
