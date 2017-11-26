@@ -1,4 +1,4 @@
-package course.labs.permissionslab;
+package com.ssdd.myapplication;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -15,8 +15,8 @@ public class BookmarksActivity extends Activity {
 	
 	private static final String TAG = "Lab-Permissions";
 
-	static final String[] projection = { Browser.BookmarkColumns.TITLE,
-			Browser.BookmarkColumns.URL };
+	//static final String[] projection = { Browser.BookmarkColumns.TITLE, Browser.BookmarkColumns.URL };
+	static final String[] projection = { Browser.EXTRA_APPLICATION_ID };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -53,17 +53,20 @@ public class BookmarksActivity extends Activity {
 
 		String text = "";
 
-		Cursor query = getContentResolver().query(Browser.BOOKMARKS_URI,
-				projection, null, null, null);
+		//Cursor query = getContentResolver().query(Browser.BOOKMARKS_URI, projection, null, null, null);
+		Cursor query = getContentResolver().query(null, projection, null, null, null);
+
 
 		query.moveToFirst();
 		while (query.moveToNext()) {
 
 			text += query.getString(query
-					.getColumnIndex(Browser.BookmarkColumns.TITLE));
+					//.getColumnIndex(Browser.BookmarkColumns.TITLE));
+					.getColumnIndex(Browser.EXTRA_APPLICATION_ID));
 			text += "\n";
 			text += query.getString(query
-					.getColumnIndex(Browser.BookmarkColumns.URL));
+					//.getColumnIndex(Browser.BookmarkColumns.URL));
+					.getColumnIndex(Browser.EXTRA_APPLICATION_ID));
 			text += "\n\n";
 
 		}

@@ -1,4 +1,4 @@
-package course.labs.permissionslab.tests;
+package com.ssdd.myapplication;
 
 import android.content.ComponentName;
 import android.content.pm.ActivityInfo;
@@ -8,7 +8,7 @@ import android.test.ActivityInstrumentationTestCase2;
 
 import com.robotium.solo.Solo;
 
-import course.labs.permissionslab.ActivityLoaderActivity;
+import com.ssdd.myapplication.ActivityLoaderActivity;
 
 public class PermissionEnforcementTest extends
 		ActivityInstrumentationTestCase2<ActivityLoaderActivity> {
@@ -33,7 +33,7 @@ public class PermissionEnforcementTest extends
 		
 		// =============== Section One ==================
 		solo.waitForActivity(
-				course.labs.permissionslab.ActivityLoaderActivity.class, 2000);
+				com.ssdd.myapplication.ActivityLoaderActivity.class, 2000);
 
 		PackageManager pm = getActivity().getPackageManager();
 		try {

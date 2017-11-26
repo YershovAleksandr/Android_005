@@ -1,4 +1,4 @@
-package course.labs.permissionslab;
+package com.ssdd.myapplication;
 
 import android.app.Activity;
 import android.content.Intent;

@@ -1,10 +1,10 @@
-package course.labs.permissionslab.tests;
+package com.ssdd.myapplication;
 
 import android.test.ActivityInstrumentationTestCase2;
 
 import com.robotium.solo.Solo;
 
-import course.labs.permissionslab.ActivityLoaderActivity;
+import com.ssdd.myapplication.ActivityLoaderActivity;
 
 public class TestBookmarks extends
 		ActivityInstrumentationTestCase2<ActivityLoaderActivity> {
@@ -36,23 +36,23 @@ public class TestBookmarks extends
 				"TestBookmarks:" +
 				"Section One:" +
 				"ActivityLoaderActivity did not load correctly.",
-				solo.waitForActivity(course.labs.permissionslab.ActivityLoaderActivity.class, delay));
+				solo.waitForActivity(com.ssdd.myapplication.ActivityLoaderActivity.class, delay));
 
 		// Click on Bookmarks Activity
 		solo.clickOnView(solo
-				.getView(course.labs.permissionslab.R.id.start_bookmarks_button));
+				.getView(com.ssdd.myapplication.R.id.start_bookmarks_button));
 
 		// Wait for activity: 'course.labs.permissionslab.BookmarksActivity'
 		assertTrue(
 				"TestBookmarks:" +
 				"Section One:" +
 				"BookmarksActivity did not load correctly.",
-				solo.waitForActivity(course.labs.permissionslab.BookmarksActivity.class, delay));
+				solo.waitForActivity(com.ssdd.myapplication.BookmarksActivity.class, delay));
 		
 		// ================ Section Two ===============
 		// Click on Get Bookmarks
 		solo.clickOnView(solo
-				.getView(course.labs.permissionslab.R.id.get_bookmarks_button));
+				.getView(com.ssdd.myapplication.R.id.get_bookmarks_button));
 
 		// Check for at least one bookmark
 		assertTrue("TestBookmarks:" +
